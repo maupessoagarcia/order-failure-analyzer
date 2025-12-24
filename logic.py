@@ -9,7 +9,7 @@ def process_file(df: pd.DataFrame) -> dict:
         orders (dict)
     """
 
-    df = df.copy()
+    df = df.iloc[:, :15].copy()
 
     df.columns = [
         'Id', 'Order Number', 'Country', 'State', 'City', 'Line1',
