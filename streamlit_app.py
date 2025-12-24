@@ -19,7 +19,12 @@ uploaded_file = st.file_uploader(
 )
 
 if uploaded_file:
-    df = pd.read_csv(uploaded_file)
+    pd.read_csv(
+    uploaded_file,
+    engine="python",
+    on_bad_lines="skip",
+    encoding="utf-8"
+    )
 
     st.success("File uploaded successfully")
     st.dataframe(df.head())
