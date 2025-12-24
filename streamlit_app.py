@@ -19,7 +19,7 @@ uploaded_file = st.file_uploader(
 )
 
 if uploaded_file:
-    pd.read_csv(
+    df = pd.read_csv(
     uploaded_file,
     engine="python",
     on_bad_lines="skip",
