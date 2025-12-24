@@ -14,8 +14,7 @@ def process_file(df: pd.DataFrame) -> dict:
     df.columns = [
         'Id', 'Order Number', 'Country', 'State', 'City', 'Line1',
         'Line2', 'Postal Code', 'Customer Name', 'Order Date',
-        'Sku', 'Quantity', 'Barcode', 'Fail Code', 'Fail Detail', 'Unused'
-    ]
+        'Sku', 'Quantity', 'Barcode', 'Fail Code', 'Fail Detail']
 
     df = df[['Order Number', 'Country', 'Sku', 'Quantity', 'Fail Code', 'Fail Detail']]
 
