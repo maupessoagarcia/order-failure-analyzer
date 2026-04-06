@@ -9,12 +9,12 @@ def process_file(df: pd.DataFrame) -> dict:
         orders (dict)
     """
 
-    df = df.iloc[:, :15].copy()
+    df = df.iloc[:, :16].copy()
 
     df.columns = [
         'Id', 'Order Number', 'Country', 'State', 'City', 'Line1',
         'Line2', 'Postal Code', 'Customer Name', 'Order Date',
-        'Sku', 'Quantity', 'Barcode', 'Fail Code', 'Fail Detail']
+        'Sku', 'Quantity', 'Barcode', 'UPC', 'Fail Code', 'Fail Detail']
 
     df = df[['Order Number', 'Country', 'Sku', 'Quantity', 'Fail Code', 'Fail Detail']]
 
